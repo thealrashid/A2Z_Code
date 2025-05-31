@@ -11,7 +11,7 @@ int my_atoi(string s) {
     if (i < s.length() && s[i] == '-') {
         neg = 1;
         i++;
-    }else if(i < s.length() && s[i] == '+') {
+    } else if (i < s.length() && s[i] == '+') {
         neg = 0;
         i++;
     }
@@ -32,7 +32,7 @@ int my_atoi(string s) {
 }
 
 int main() {
-    string s = "   -+042";
+    string s = "   -042";
 
     cout << my_atoi(s) << endl;
 }
