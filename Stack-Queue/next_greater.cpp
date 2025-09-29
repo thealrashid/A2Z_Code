@@ -17,12 +17,13 @@ vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2) {
         st.push(nums2[i]);
     }
 
+    while (!st.empty()) {
+        nextGreater[st.top()] = -1;
+        st.pop();
+    }
+
     for (int i = 0; i < n1; i++) {
-        if (nextGreater.find(nums1[i]) != nextGreater.end()) {
-            res.push_back(nextGreater[nums1[i]]);
-        } else {
-            res.push_back(-1);
-        }
+        res.push_back(nextGreater[nums1[i]]);
     }
 
     return res;
